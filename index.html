@@ -7,315 +7,72 @@
     <meta name="description" content="Kushagra Bainsla — MSCS candidate at San José State University. Backend & platform engineer seeking Summer SWE internship. Python, Django, AWS, React, PostgreSQL." />
     <meta name="keywords" content="Kushagra Bainsla, SJSU, Software Engineer, Backend, Python, Django, AWS, Internship, React, PostgreSQL" />
     <link rel="canonical" href="/" />
-    <!-- Optional favicon: place a 32x32 icon at /assets/favicon.ico -->
-    <!-- <link rel="icon" href="/assets/favicon.ico" /> -->
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Kushagra Bainsla — MSCS @ SJSU | SWE" />
     <meta property="og:description" content="Backend & platform engineer seeking Summer SWE internship." />
     <meta property="og:url" content="/" />
-    <!-- <meta property="og:image" content="/assets/og-image.png" /> -->
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kushagra Bainsla",
-      "jobTitle": "MSCS Candidate / Software Engineer",
-      "email": "mailto:kushagra.bainsla@sjsu.edu",
-      "telephone": "+1-408-387-4802",
-      "alumniOf": [
-        {"@type":"CollegeOrUniversity","name":"San José State University"},
-        {"@type":"CollegeOrUniversity","name":"Kurukshetra University"}
-      ],
-      "sameAs": [
-        "https://linkedin.com/in/your-linkedin", 
-        "https://github.com/your-work-github",
-        "https://github.com/your-personal-github",
-        "https://leetcode.com/your-handle",
-        "https://medium.com/@your-handle"
-      ]
-    }
-    </script>
-
     <style>
-      :root {
-        --bg: #0b1220;
-        --panel: #0f172a;
-        --text: #e2e8f0;
-        --muted: #94a3b8;
-        --brand: #60a5fa;
-        --brand-2: #34d399;
-        --card: #111827;
-        --ring: rgba(96,165,250,.45);
-        --maxw: 980px;
-      }
-      @media (prefers-color-scheme: light) {
-        :root {
-          --bg: #f8fafc;
-          --panel: #ffffff;
-          --text: #0f172a;
-          --muted: #475569;
-          --card: #ffffff;
-          --ring: rgba(30,64,175,.2);
-        }
-      }
-      * { box-sizing: border-box; }
-      html, body { height: 100%; }
-      body {
-        margin: 0;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-        color: var(--text);
-        background: radial-gradient(1200px 600px at 10% -10%, rgba(52,211,153,.12), transparent),
-                    radial-gradient(1200px 600px at 90% 0%, rgba(96,165,250,.12), transparent),
-                    var(--bg);
-        line-height: 1.6;
-      }
-      .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
-      a { color: var(--brand); text-decoration: none; }
-      a:hover { text-decoration: underline; }
-      .btn {
-        display: inline-flex; align-items: center; gap: .5rem;
-        padding: .7rem 1rem; border-radius: 999px; border: 1px solid transparent;
-        background: linear-gradient(135deg, var(--brand), var(--brand-2));
-        color: white; font-weight: 700; letter-spacing:.2px; text-decoration: none;
-        box-shadow: 0 10px 30px rgba(0,0,0,.25);
-      }
-      .btn.secondary { background: transparent; color: var(--text); border-color: rgba(148,163,184,.25); }
-      .chip { display:inline-block; padding:.35rem .65rem; border-radius: 999px; background: rgba(148,163,184,.14); color: var(--text); font-size: .85rem; margin: .2rem .25rem; border: 1px solid rgba(148,163,184,.2); }
-      header {
-        position: sticky; top: 0; backdrop-filter: saturate(180%) blur(10px);
-        background: color-mix(in oklab, var(--bg) 82%, transparent);
-        border-bottom: 1px solid rgba(148,163,184,.2);
-        z-index: 50;
-      }
-      nav { display:flex; align-items:center; justify-content:space-between; padding: .75rem 0; }
-      nav .brand { display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.3px; }
-      nav ul { list-style: none; display:flex; gap: 1rem; margin:0; padding:0; }
-      nav a { color: var(--text); opacity:.9; }
-      nav a:hover { opacity: 1; }
-      .hero { padding: 4rem 0 2rem; text-align: left; }
-      .hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 .5rem; line-height:1.1; }
-      .hero p.lead { font-size: clamp(1rem, 2.2vw, 1.25rem); color: var(--muted); margin: 0 0 1.25rem; }
-      .actions { display:flex; flex-wrap:wrap; gap: .75rem; margin-top: 1rem; }
-      .grid { display:grid; grid-template-columns: 1fr; gap: 1rem; }
-      @media (min-width: 820px) { .grid-2 { grid-template-columns: repeat(2, 1fr);} }
-      section { padding: 2.5rem 0; }
-      .section-title { font-size: 1.4rem; margin: 0 0 1rem; letter-spacing:.2px; }
-      .card { background: var(--card); border: 1px solid rgba(148,163,184,.2); border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(2,6,23,.25); }
-      .card h3 { margin-top: 0; margin-bottom: .35rem; }
-      .eyebrow { font-size: .85rem; color: var(--muted); margin-bottom:.35rem; }
-      .bullets { margin: .5rem 0 0; padding-left: 1.1rem; }
-      .bullets li { margin: .25rem 0; }
-      .kpi { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.4rem; }
-      .kpi .chip { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.3); }
-      .skills { display:flex; flex-wrap: wrap; gap:.35rem; }
-      .muted { color: var(--muted); }
-      .footer { border-top: 1px solid rgba(148,163,184,.2); padding: 2rem 0; text-align:center; font-size:.95rem; }
-      .skip { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
-      .skip:focus { position: static; width:auto; height:auto; padding:.5rem; background: var(--brand); color:white; }
-      .sr { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-      .tags { margin-top: .5rem; }
-      .two-col { columns: 2 280px; column-gap: 16px; }
+      :root { --bg:#0b1220; --panel:#0f172a; --text:#e2e8f0; --muted:#94a3b8; --brand:#60a5fa; --brand2:#34d399; --card:#111827; --maxw:980px; }
+      @media (prefers-color-scheme: light){ :root{ --bg:#f8fafc; --panel:#fff; --text:#0f172a; --muted:#475569; --card:#fff; } }
+      *{box-sizing:border-box} html,body{height:100%}
+      body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6;color:var(--text);background:radial-gradient(1200px 600px at 10% -10%, rgba(52,211,153,.12), transparent),radial-gradient(1200px 600px at 90% 0%, rgba(96,165,250,.12), transparent),var(--bg)}
+      a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+      .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+      header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(10px);background:color-mix(in oklab, var(--bg) 82%, transparent);border-bottom:1px solid rgba(148,163,184,.2);z-index:50}
+      nav{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+      nav .brand{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.3px}
+      nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+      nav a{color:var(--text);opacity:.9} nav a:hover{opacity:1}
+      .hero{padding:4rem 0 2rem}
+      .hero h1{font-size:clamp(2rem,4vw,3rem);margin:0 0 .5rem;line-height:1.1}
+      .hero p.lead{font-size:clamp(1rem,2.2vw,1.25rem);color:var(--muted);margin:0 0 1.25rem}
+      .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+      .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.1rem;border-radius:999px;border:1px solid transparent;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-weight:700;letter-spacing:.2px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+      .btn.secondary{background:transparent;color:var(--text);border-color:rgba(148,163,184,.25)}
+      .contact-strip{background:color-mix(in oklab, var(--panel) 92%, transparent);border:1px solid rgba(148,163,184,.2);border-radius:16px;padding:1rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:center}
+      .contact-strip a{display:inline-flex;align-items:center;gap:.4rem;padding:.6rem .9rem;border-radius:999px;border:1px solid rgba(148,163,184,.25);text-decoration:none;color:var(--text)}
+      .contact-strip a:hover{border-color:var(--brand)}
+      section{padding:2.5rem 0}
+      .section-title{font-size:1.4rem;margin:0 0 1rem}
+      .card{background:var(--card);border:1px solid rgba(148,163,184,.2);border-radius:16px;padding:1.25rem;box-shadow:0 10px 30px rgba(2,6,23,.25)}
+      .muted{color:var(--muted)}
+      .footer{border-top:1px solid rgba(148,163,184,.2);padding:2rem 0;text-align:center;font-size:.95rem}
+      .skip{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+      .skip:focus{position:static;width:auto;height:auto;padding:.5rem;background:var(--brand);color:#fff}
     </style>
   </head>
   <body>
-    <a href="#main" class="skip">Skip to content</a>
-    <header>
-      <div class="container">
-        <nav aria-label="Primary">
-          <div class="brand" aria-label="Home">
-            <span aria-hidden="true">💠</span>
-            <span>Kushagra Bainsla</span>
-          </div>
-          <ul>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
     <main id="main" class="container">
       <section class="hero" id="about">
         <h1>Kushagra Bainsla</h1>
         <p class="lead">MSCS @ San José State University • Backend & Platform Engineering • <span class="muted">Open to Summer SWE internships</span></p>
         <div class="actions">
-          <a class="btn" href="assets/SJSU_Intern_Resume.pdf" download>Download Résumé</a>
-          <a class="btn secondary" href="mailto:kushagra.bainsla@sjsu.edu">Email</a>
-          <a class="btn secondary" href="tel:+14083874802" aria-label="Call Kushagra">Call</a>
-          <!-- TODO: replace # with your live profiles -->
-          <a class="btn secondary" href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn secondary" href="https://github.com/your-work-github" target="_blank" rel="noopener">GitHub</a>
-        </div>
-        <p class="muted" style="margin-top:.75rem">San José, CA • <a href="#contact">kushagra.bainsla@sjsu.edu</a> • +1 (408) 387-4802</p>
-      </section>
-
-      <section id="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="grid grid-2">
-          <article class="card">
-            <div class="eyebrow">Aug 2024 – Jun 2025 · Senior Software Engineer · Uniqode</div>
-            <h3>Backend & Platform — 99.99% uptime • $2M ARR product</h3>
-            <ul class="bullets">
-              <li>Built event‑driven email automation with Celery + Gmail OAuth, enabling delayed, personalized follow‑ups and boosting engagement <strong>+36%</strong>.</li>
-              <li>Shipped adaptive notification engine (immediate/digest/auto) based on real‑time engagement; improved relevance <strong>+40%</strong>.</li>
-              <li>Designed secure public event ingestion for Amplitude; cut analytics data loss <strong>−97%</strong>.</li>
-              <li>Eliminated <strong>4.2B</strong> unnecessary logs/year via log‑level tuning; saved <strong>300+ EC2 hours</strong> & <strong>$12K/yr</strong> Datadog.</li>
-            </ul>
-            <div class="kpi">
-              <span class="chip">Celery</span><span class="chip">Python</span><span class="chip">AWS</span><span class="chip">Amplitude</span><span class="chip">Datadog</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="eyebrow">Aug 2022 – Jul 2024 · Software Engineer · Uniqode</div>
-            <h3>APIs, Analytics Infra & Growth</h3>
-            <ul class="bullets">
-              <li>Cut public API latency <strong>−42%</strong> (P95 &lt;120ms) via query optimization & custom high‑perf utilities.</li>
-              <li>Migrated analytics from Elasticsearch → Apache Pinot; reduced P95 query latency <strong>25s → 600ms</strong> (−97.6%), costs −30%.</li>
-              <li>Built high‑throughput email reporting for <strong>200K+ products</strong>; drove engagement & discovery.</li>
-              <li>Integrated Azure AD & Salesforce; contributed <strong>$300K+/yr</strong> enterprise revenue.</li>
-              <li>Launched usage‑based incentives with Stripe; reduced churn <strong>−34%</strong>.</li>
-              <li>Accelerated bulk ops (10K+ records) <strong>12×</strong> via batched inserts & query tuning.</li>
-              <li>Mentored 3 backend interns (−30% ramp‑up); ran 70+ interviews; improved docs.</li>
-            </ul>
-            <div class="kpi">
-              <span class="chip">Django</span><span class="chip">DRF</span><span class="chip">Apache Pinot</span><span class="chip">Elasticsearch</span><span class="chip">Stripe</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="eyebrow">Feb 2022 – Jul 2022 · Software Engineering Intern · Uniqode</div>
-            <h3>REST APIs & Threat Monitoring</h3>
-            <ul class="bullets">
-              <li>Added bulk CSV export + soft delete; cut completion time <strong>−40%</strong> via async processing.</li>
-              <li>Implemented IP threat monitoring (Tor/VPN/bots) with minimal overhead.</li>
-              <li>Raised API unit test coverage to <strong>93%</strong>; resolved legacy bugs.</li>
-            </ul>
-            <div class="kpi">
-              <span class="chip">Python</span><span class="chip">Django</span><span class="chip">Redis</span><span class="chip">PostgreSQL</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="eyebrow">May 2021 – Jul 2021 · Summer Intern · LetsEndorse Development</div>
-            <h3>React Dashboards & Mobile UI</h3>
-            <ul class="bullets">
-              <li>Built modular React.js dashboards; reduced KPI tracking time <strong>&gt;10×</strong>.</li>
-              <li>Crafted 15+ React Native screens; doubled delivery partner efficiency.</li>
-            </ul>
-            <div class="kpi">
-              <span class="chip">React</span><span class="chip">React Native</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="grid grid-2">
-          <article class="card">
-            <div class="eyebrow">AWS SES · SQS · Tracking Pixels</div>
-            <h3>Sentinel — Internal Email Tracking</h3>
-            <p>Real‑time, decoupled processing to inform content decisions; improved engagement <strong>+40%</strong>.</p>
-            <div class="tags">
-              <span class="chip">AWS SES</span><span class="chip">SQS</span><span class="chip">Python</span>
-            </div>
-          </article>
-          <article class="card">
-            <div class="eyebrow">Open‑source CLI · 10,000+ downloads</div>
-            <h3>build-flask-app</h3>
-            <p>CLI that bootstraps Flask apps with WebSocket support & DB init to speed up new projects.</p>
-            <div class="tags">
-              <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">CLI</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="card">
-          <div class="two-col">
-            <p><strong>Languages:</strong> Python, JavaScript, TypeScript, SQL, C, C++, HTML, CSS, Shell scripting</p>
-            <p><strong>Frameworks & Libraries:</strong> Django, DRF, Flask, React, React Native, Angular, Express, GraphQL, Playwright</p>
-            <p><strong>Databases:</strong> PostgreSQL, SQLite, MongoDB, Redis, Apache Pinot, Elasticsearch</p>
-            <p><strong>Tools & Cloud:</strong> Git, Docker, Datadog, AWS (SQS, SES, EBS, S3, EC2, ECR, RDS, Lambda, Redshift, CloudFormation), Celery, Serverless Framework, GitHub Actions, LaunchDarkly, Amplitude, Stripe, Sentry, Auth0, Nginx, Firebase, Froala, Hasura, Postman</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="achievements">
-        <h2 class="section-title">Achievements</h2>
-        <div class="card">
-          <ul class="bullets">
-            <li>Rank <strong>292</strong> out of 100,000+ in CodeKaze.</li>
-            <li>Global Rank <strong>214</strong> (India Rank 35) in LeetCode Biweekly Contest 73 (Top 1.1%).</li>
-            <li>Top 2.8% among 28,991 in ScalerCodeX 2.0.</li>
-            <li>2021 LeetCode Badge (Top 0.12% globally); peak rating 1963 (Knight), Top 600 India.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="education">
-        <h2 class="section-title">Education</h2>
-        <div class="grid grid-2">
-          <article class="card">
-            <div class="eyebrow">Aug 2025 – May 2027 (Expected) · San José, CA</div>
-            <h3>San José State University — M.S., Computer Science</h3>
-            <p class="muted">Relevant Coursework: Database Systems Principles, Advance Topics in Cloud Computing, Graduate Technical Writing</p>
-          </article>
-          <article class="card">
-            <div class="eyebrow">Aug 2018 – Jul 2022 · India</div>
-            <h3>Kurukshetra University — B.Tech, Computer Science & Engineering</h3>
-            <p class="muted">Relevant Coursework: Data Structures and Algorithms, Advanced Algorithms, DBMS, OOP, Computer Networks, Operating Systems</p>
-          </article>
+          <a class="btn" href="assets/kushagra_bainsla_resume.pdf" download>Download Résumé</a>
         </div>
       </section>
 
       <section id="contact">
-        <h2 class="section-title">Contact</h2>
         <div class="card">
           <p><strong>Email:</strong> <a href="mailto:kushagra.bainsla@sjsu.edu">kushagra.bainsla@sjsu.edu</a></p>
           <p><strong>Phone:</strong> <a href="tel:+14083874802">+1 (408) 387‑4802</a></p>
           <p><strong>Location:</strong> San José, CA, USA</p>
-          <p><strong>Profiles:</strong> 
-            <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a> · 
-            <a href="https://github.com/your-work-github" target="_blank" rel="noopener">GitHub (Work)</a> · 
-            <a href="https://github.com/your-personal-github" target="_blank" rel="noopener">GitHub (Personal)</a> · 
-            <a href="https://leetcode.com/your-handle" target="_blank" rel="noopener">LeetCode</a> · 
-            <a href="https://medium.com/@your-handle" target="_blank" rel="noopener">Medium</a>
-          </p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kushagrabainsla/" target="_blank" rel="noopener">linkedin.com/in/kushagrabainsla</a></p>
+          <p><strong>Github (Work):</strong> <a href="https://github.com/Kushagra-org" target="_blank" rel="noopener">github.com/Kushagra-org</a></p>
+          <p><strong>Github (Personal):</strong> <a href="https://github.com/Kushagrabainsla" target="_blank" rel="noopener">github.com/Kushagrabainsla</a></p>
+          <p><strong>LeetCode:</strong> <a href="https://leetcode.com/u/kushagrabainsla/" target="_blank" rel="noopener">leetcode.com/u/kushagrabainsla</a></p>
+          <p><strong>Medium:</strong> <a href="https://medium.com/@kushagrabainsla" target="_blank" rel="noopener">medium.com/@kushagrabainsla</a>
+          <p><strong>Digital Business Card:</strong> <a href="https://smartcards.pro/KUl7uX" target="_blank" rel="noopener">smartcards.pro/KUl7uX</a>
+        </p>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div>© <span id="year"></span> Kushagra Bainsla.</div>
-      </div>
-    </footer>
-
     <script>
-      // Set current year in footer
       document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Add focus ring on keyboard nav only
-      const handleFirstTab = (e) => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('user-is-tabbing');
-          window.removeEventListener('keydown', handleFirstTab);
-        }
-      };
-      window.addEventListener('keydown', handleFirstTab);
     </script>
   </body>
 </html>
