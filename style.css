@@ -438,6 +438,10 @@ h1 {
     color: var(--muted);
 }
 
+.skills>.skills-wide {
+    grid-column: 1 / -1;
+}
+
 /* Contact */
 .contact {
     margin-top: clamp(72px, 9vw, 112px);
