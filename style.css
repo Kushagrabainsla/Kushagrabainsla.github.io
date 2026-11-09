@@ -356,30 +356,6 @@ h1 {
     color: var(--muted);
 }
 
-/* Numbers */
-.numbers {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-    gap: 48px 40px;
-    margin-top: 96px;
-    padding: clamp(48px, 7vw, 88px) var(--gutter);
-    background: var(--accent-fill);
-    color: var(--white);
-}
-
-.numbers p {
-    font-weight: 500;
-}
-
-.numbers .number {
-    margin-bottom: 14px;
-    font-family: var(--font-display);
-    font-size: clamp(44px, 4.4vw, 72px);
-    line-height: 1;
-    font-weight: 300;
-    letter-spacing: -0.05em;
-}
-
 /* Experience and education */
 .block {
     padding: clamp(72px, 9vw, 112px) var(--gutter) 0;
