@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kushagra Bainsla - Systems & Infrastructure Engineer</title>
-  <meta name="description" content="Systems and infrastructure engineer focused on scalable distributed systems.">
+  <meta name="description" content="Systems and infrastructure engineer working on distributed systems, LLM inference, GPU efficiency, and fault-tolerant ML training.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://kushagrabainsla.github.io/">
   <meta property="og:title" content="Kushagra Bainsla - Systems & Infrastructure Engineer">
   <meta property="og:description"
-    content="Systems and infrastructure engineer focused on scalable distributed systems.">
+    content="Systems and infrastructure engineer working on distributed systems, LLM inference, GPU efficiency, and fault-tolerant ML training.">
   <meta property="og:image" content="https://kushagrabainsla.github.io/assets/og-image.png">
 
   <!-- Twitter -->
@@ -25,7 +25,7 @@
   <meta property="twitter:url" content="https://kushagrabainsla.github.io/">
   <meta property="twitter:title" content="Kushagra Bainsla - Systems & Infrastructure Engineer">
   <meta property="twitter:description"
-    content="Systems and infrastructure engineer focused on scalable distributed systems.">
+    content="Systems and infrastructure engineer working on distributed systems, LLM inference, GPU efficiency, and fault-tolerant ML training.">
   <meta property="twitter:image" content="https://kushagrabainsla.github.io/assets/og-image.png">
 </head>
 
@@ -36,8 +36,8 @@
     <div class="nav-container">
       <a href="#" class="logo">Kushagra Bainsla</a>
       <div class="nav-links">
-        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
         <a href="#work">Work</a>
         <a href="assets/Kushagra_Bainsla_Resume_2026.pdf" target="_blank">Resume</a>
         <a href="#contact">Contact</a>
@@ -55,7 +55,7 @@
         <span class="text-gradient">Infrastructure.</span>
       </h1>
       <p class="subtitle fade-in-up delay-1">
-        Systems and infrastructure engineer focused on distributed systems, resilience, and scale.
+        Systems and infrastructure engineer working on distributed systems, LLM inference, GPU efficiency, and fault-tolerant ML training.
       </p>
       <a href="#work" class="cta-button fade-in-up delay-2">View Work</a>
     </div>
@@ -69,7 +69,7 @@
         <div class="bento-card wide fade-in-up delay-1">
           <i class="fa-solid fa-server card-icon"></i>
           <h3 class="card-title">Backend Engineering</h3>
-          <p class="card-desc">Production-grade service design across Python, Go, and Node - GraphQL APIs, async task pipelines with Celery, and systems architected from the ground up for sub-120ms latency, five-nines reliability, and zero-downtime operations.</p>
+          <p class="card-desc">Production-grade service design across Python, Go, and Node - GraphQL APIs, async task pipelines with Celery, and systems architected from the ground up for sub-120ms latency, 99.99% uptime, and zero-downtime operations.</p>
         </div>
 
         <div class="bento-card fade-in-up delay-2">
@@ -93,7 +93,7 @@
         <div class="bento-card fade-in-up delay-2">
           <i class="fa-solid fa-brain card-icon"></i>
           <h3 class="card-title">ML Infrastructure</h3>
-          <p class="card-desc">End-to-end ML infrastructure built for production - training pipelines with live checkpoint-restore (CRIU/CUDA) for zero-loss preemption, ONNX-optimized model serving, experiment tracking, and vector search powering semantic retrieval at scale.</p>
+          <p class="card-desc">End-to-end ML infrastructure built for production - training pipelines with live checkpoint-restore (CRIU/CUDA) for zero-loss preemption, LLM serving and GPU performance analysis, ONNX-optimized model serving, experiment tracking, and vector search powering semantic retrieval at scale.</p>
         </div>
 
         <div class="bento-card fade-in-up delay-3">
@@ -121,7 +121,7 @@
             <span class="exp-date">May 2026 – Aug 2026</span>
           </div>
           <ul class="exp-bullets">
-            <li>Building a live ML workload checkpoint-restore capability to eliminate training loss on preemption - capturing and migrating full CPU/GPU execution state for multi-GPU, cross-node jobs on production clusters (CRIU, CUDA, Kubernetes) to cut compute waste and unblock fault-tolerant, preemptible training at scale.</li>
+            <li>Engineered a live ML workload checkpoint-restore system - capturing and migrating complete CPU and GPU execution state across heterogeneous machines (CRIU, CUDA, Kubernetes) to enable fault-tolerant, preemptible training with zero data loss.</li>
           </ul>
         </div>
 
@@ -185,20 +185,45 @@
       <div class="project-feature fade-in-up">
         <div class="project-content">
           <h3 class="project-title">
+            <a href="https://github.com/Kushagrabainsla/north" target="_blank" class="project-link">north</a>
+          </h3>
+          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
+            Personal AI Agent That Earns Autonomy
+          </p>
+          <p class="card-desc">
+            A digital version of you that learns how you think and earns autonomy over time. A planner dispatches work across agents and coding tools, dynamic model tiering routes each step to the right model at the right cost, and an append-only audit trail enables partial task recovery without redundant inference. Long-term memory and judgment rules sharpen from observed decisions, an approval system governs what runs unattended, and it all runs from a dashboard, terminal, Telegram, or a schedule.
+          </p>
+          <div class="project-tags">
+            <span class="tag">LLM</span>
+            <span class="tag">Multi-Agent</span>
+            <span class="tag">Orchestration</span>
+            <span class="tag">Memory</span>
+          </div>
+        </div>
+        <div class="project-visual">
+          <i class="fa-solid fa-sitemap" style="font-size: 5rem; color: var(--accent-blue);"></i>
+        </div>
+      </div>
+
+      <div class="project-feature fade-in-up">
+        <div class="project-content">
+          <h3 class="project-title">
             <a href="https://dashboard.thesentinel.site/" target="_blank" class="project-link">Sentinel</a>
           </h3>
           <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
             Distributed, Serverless Email Platform
           </p>
           <p class="card-desc">
-            A production email platform handling 200K+ messages/month for under $50 - a cost structure that would be impossible on traditional infrastructure. Async job queues, real-time event ingestion, multi-region replication, and a retry/DLQ architecture that treats failure as a first-class concern.
+            A production email platform handling 200K+ messages/month for under $50 - a cost structure that would be impossible on traditional infrastructure. Async job queues, real-time event ingestion, multi-region replication, and a retry/DLQ architecture that treats failure as a first-class concern, with Gemini-powered content generation and live analytics that separate human opens from proxy opens.
           </p>
           <div class="project-tags">
             <span class="tag">Serverless</span>
             <span class="tag">Event Driven</span>
             <span class="tag">AWS</span>
             <span class="tag">Queues</span>
+            <span class="tag">GenAI</span>
           </div>
+          <a href="https://github.com/Kushagrabainsla/sentinel" target="_blank" rel="noopener" class="project-source"><i class="fa-brands fa-github"></i> Source</a>
         </div>
         <div class="project-visual">
           <div class="node-grid">
@@ -218,137 +243,23 @@
       <div class="project-feature fade-in-up">
         <div class="project-content">
           <h3 class="project-title">
-            <a href="https://pepy.tech/projects/build-flask-app" target="_blank" class="project-link">Build-flask-app</a>
+            <a href="https://kushagrabainsla.github.io/hereafter/" target="_blank" class="project-link">Hereafter</a>
           </h3>
           <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            Open-Source Flask CLI (42K+ Downloads)
+            Peer-to-Peer Multiplayer FPS in the Browser
           </p>
           <p class="card-desc">
-            Eliminated the hours-long boilerplate tax on Flask projects - an open-source CLI now adopted by 42K+ developers that generates production-ready scaffolding with WebSockets, database integration, and test infrastructure wired up from day one.
+            A first-person shooter that runs from a single link - no install, no account, no game server. Two to eight players connect browser to browser over WebRTC, with one player's browser checking combat for the room; if that player leaves or crashes, the role moves to another and the match carries on. A hand-built night market with destructible cover, rendered in Three.js on WebGPU with a WebGL 2 fallback.
           </p>
           <div class="project-tags">
-            <span class="tag">Flask</span>
-            <span class="tag">CLI</span>
-            <span class="tag">Open Source</span>
-            <span class="tag">PyPI</span>
+            <span class="tag">WebRTC</span>
+            <span class="tag">Peer-to-Peer</span>
+            <span class="tag">Three.js</span>
+            <span class="tag">WebGPU</span>
           </div>
         </div>
         <div class="project-visual">
-          <i class="fa-solid fa-terminal" style="font-size: 5rem; color: var(--accent-blue);"></i>
-        </div>
-      </div>
-
-      <div class="project-feature fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">north</h3>
-          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            Multi-Agent LLM Orchestration System
-          </p>
-          <p class="card-desc">
-            An orchestration layer for LLM agents that treats inference cost and task continuity as core engineering concerns - dynamic model tiering routes work to the right model at the right cost, an append-only audit trail enables partial task recovery without redundant inference, and a preference engine that sharpens its routing decisions based on observed user judgment over time.
-          </p>
-          <div class="project-tags">
-            <span class="tag">LLM</span>
-            <span class="tag">Multi-Agent</span>
-            <span class="tag">Orchestration</span>
-            <span class="tag">AI</span>
-          </div>
-        </div>
-        <div class="project-visual">
-          <i class="fa-solid fa-sitemap" style="font-size: 5rem; color: var(--accent-blue);"></i>
-        </div>
-      </div>
-
-      <div class="project-feature fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">
-            <a href="https://devpost.com/software/curiosityai" target="_blank" class="project-link">CuriosityAI</a>
-          </h3>
-          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            CuriosityAI @CalHacks 12.0
-          </p>
-          <p class="card-desc">
-            Built at CalHacks 12.0 - a semantic research discovery engine that surfaces connections humans would miss. High-dimensional embeddings in ChromaDB map the research space, dimensionality reduction collapses it into navigable 3D clusters, and LLMs generate novel, feasible research directions at the boundaries of existing knowledge.
-          </p>
-          <div class="project-tags">
-            <span class="tag">GenAI</span>
-            <span class="tag">ChromaDB</span>
-            <span class="tag">Vector Search</span>
-            <span class="tag">3D Clustering</span>
-          </div>
-        </div>
-        <div class="project-visual">
-          <i class="fa-solid fa-brain" style="font-size: 5rem; color: var(--accent-purple);"></i>
-        </div>
-      </div>
-
-      <div class="project-feature fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">
-            <a href="https://github.com/krishmula/fightflow" target="_blank" class="project-link">FightFlow</a>
-          </h3>
-          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            ML Punch Classification System
-          </p>
-          <p class="card-desc">
-            A rigorous ML study showing the right inductive bias beats more compute - five architectures from scratch CNN to fine-tuned ResNet-18, all outperformed by a pose-based LSTM that leverages skeleton features invariant to lighting, background, and camera angle. A concrete demonstration that feature engineering strategy matters more than model complexity.
-          </p>
-          <div class="project-tags">
-            <span class="tag">PyTorch</span>
-            <span class="tag">MediaPipe</span>
-            <span class="tag">LSTM</span>
-            <span class="tag">Computer Vision</span>
-          </div>
-        </div>
-        <div class="project-visual">
-          <i class="fa-solid fa-person-running" style="font-size: 5rem; color: var(--accent-blue);"></i>
-        </div>
-      </div>
-
-      <div class="project-feature fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">
-            <a href="https://github.com/Aero-inc/sentry" target="_blank" class="project-link">Sentry</a>
-            <span style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 400; margin-left: 0.75rem;">In Development</span>
-          </h3>
-          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            Real-Time Threat Detection Platform
-          </p>
-          <p class="card-desc">
-            A cloud-native threat detection platform built for operational rigor from day one - ONNX-optimized ML models served via Flask on ECS Fargate, React frontend on S3, infrastructure fully codified in Terraform with environment-isolated IAM, end-to-end CloudWatch observability, and automated pipelines that promote to staging and production without manual intervention.
-          </p>
-          <div class="project-tags">
-            <span class="tag">ML Inference</span>
-            <span class="tag">AWS ECS</span>
-            <span class="tag">Terraform</span>
-            <span class="tag">ONNX</span>
-          </div>
-        </div>
-        <div class="project-visual">
-          <i class="fa-solid fa-shield-halved" style="font-size: 5rem; color: var(--accent-purple);"></i>
-        </div>
-      </div>
-
-      <div class="project-feature fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">
-            <a href="https://github.com/Kushagrabainsla/prism" target="_blank" class="project-link">Prism</a>
-          </h3>
-          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            Custom Programming Language
-          </p>
-          <p class="card-desc">
-            A programming language designed from first principles for a specific class of problem - declarative deconstruction of complex data. Built in Haskell with a Parsec grammar, pattern matching with variable binding, recursive scoping, and monadic error propagation. A demonstration of language theory applied: the right semantics make the hard problems tractable.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Haskell</span>
-            <span class="tag">Language Design</span>
-            <span class="tag">Parsec</span>
-            <span class="tag">Interpreter</span>
-          </div>
-        </div>
-        <div class="project-visual">
-          <i class="fa-solid fa-code" style="font-size: 5rem; color: var(--accent-blue);"></i>
+          <i class="fa-solid fa-crosshairs" style="font-size: 5rem; color: var(--accent-purple);"></i>
         </div>
       </div>
 
@@ -361,7 +272,7 @@
             Turning Linear AI Chats into a Tree of Curiosity
           </p>
           <p class="card-desc">
-            A bet on how people will actually learn from AI: not one linear thread, but a tree of curiosity. Socratic Tangents lets you branch off any passage of a ChatGPT or Claude reply into a focused, inline thought bubble - going deep on a tangent without derailing your main conversation. The product wins on trust and zero friction: no API key, no backend, no telemetry. It drives the page's own session, so everything runs locally and nothing ever leaves the browser. The architecture treats provider support as a pluggable adapter, not a fork - so reach scales with engineering effort that stays near-flat.
+            A bet on how people will actually learn from AI: not one linear thread, but a tree of curiosity. Branch off any passage of a ChatGPT or Claude reply into a focused, inline thought bubble without derailing the main conversation. No API key, no backend, no telemetry - it drives the page's own session, so nothing ever leaves the browser, and each provider is a pluggable adapter.
           </p>
           <div class="project-tags">
             <span class="tag">Browser Extension</span>
@@ -369,8 +280,88 @@
           </div>
         </div>
         <div class="project-visual">
-          <i class="fa-solid fa-code-branch" style="font-size: 5rem; color: var(--accent-purple);"></i>
+          <i class="fa-solid fa-code-branch" style="font-size: 5rem; color: var(--accent-blue);"></i>
         </div>
+      </div>
+
+      <div class="project-feature fade-in-up">
+        <div class="project-content">
+          <h3 class="project-title">
+            <a href="https://pepy.tech/projects/build-flask-app" target="_blank" class="project-link">Build-flask-app</a>
+          </h3>
+          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
+            Open-Source Flask CLI (42K+ Downloads)
+          </p>
+          <p class="card-desc">
+            Eliminated the hours-long boilerplate tax on Flask projects - an open-source CLI with 42K+ downloads that generates production-ready scaffolding with WebSockets, database integration, and test infrastructure wired up from day one.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Flask</span>
+            <span class="tag">CLI</span>
+            <span class="tag">Open Source</span>
+            <span class="tag">PyPI</span>
+          </div>
+        </div>
+        <div class="project-visual">
+          <i class="fa-solid fa-terminal" style="font-size: 5rem; color: var(--accent-purple);"></i>
+        </div>
+      </div>
+
+      <h3 class="more-projects-title fade-in-up">More Projects</h3>
+      <div class="more-projects-grid">
+
+        <div class="bento-card fade-in-up delay-1">
+          <h4 class="card-title">
+            <a href="https://devpost.com/software/curiosityai" target="_blank" class="project-link">CuriosityAI</a>
+          </h4>
+          <p class="more-project-sub">CalHacks 12.0</p>
+          <p class="card-desc">A semantic research discovery engine - embeddings in ChromaDB map the research space into navigable 3D clusters, and LLMs propose feasible directions at the boundaries of existing knowledge.</p>
+          <div class="project-tags">
+            <span class="tag">GenAI</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">Vector Search</span>
+          </div>
+        </div>
+
+        <div class="bento-card fade-in-up delay-2">
+          <h4 class="card-title">
+            <a href="https://github.com/krishmula/fightflow" target="_blank" class="project-link">FightFlow</a>
+          </h4>
+          <p class="more-project-sub">ML Punch Classification</p>
+          <p class="card-desc">A study of five architectures, from a scratch CNN to fine-tuned ResNet-18, all outperformed by a pose-based LSTM on skeleton features invariant to lighting, background, and camera angle.</p>
+          <div class="project-tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">MediaPipe</span>
+            <span class="tag">LSTM</span>
+          </div>
+        </div>
+
+        <div class="bento-card fade-in-up delay-1">
+          <h4 class="card-title">
+            <a href="https://github.com/Aero-inc/sentry" target="_blank" class="project-link">Sentry</a>
+          </h4>
+          <p class="more-project-sub">Real-Time Threat Detection</p>
+          <p class="card-desc">A cloud-native detection platform - ONNX-optimized models served on ECS Fargate, infrastructure codified in Terraform with environment-isolated IAM, and automated promotion to staging and production.</p>
+          <div class="project-tags">
+            <span class="tag">ML Inference</span>
+            <span class="tag">AWS ECS</span>
+            <span class="tag">Terraform</span>
+          </div>
+        </div>
+
+        <div class="bento-card fade-in-up delay-2">
+          <h4 class="card-title">
+            <a href="https://github.com/Kushagrabainsla/prism" target="_blank" class="project-link">Prism</a>
+          </h4>
+          <p class="more-project-sub">Custom Programming Language</p>
+          <p class="card-desc">A language for declarative deconstruction of complex data, built in Haskell with a Parsec grammar, pattern matching with variable binding, recursive scoping, and monadic error propagation.</p>
+          <div class="project-tags">
+            <span class="tag">Haskell</span>
+            <span class="tag">Language Design</span>
+            <span class="tag">Parsec</span>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -388,7 +379,8 @@
           <h3 class="card-title">Master of Science in Computer Science</h3>
           <p class="card-desc">San Jose State University &nbsp;·&nbsp; GPA 4.0 / 4.0</p>
           <p class="card-desc" style="margin-top: 0.4rem; color: var(--text-secondary); font-size: 0.85rem;">Aug 2025 – May 2027</p>
-          <p class="card-desc" style="margin-top: 1rem; font-size: 0.88rem;">Database Systems Principles · Distributed Systems · Cloud Computing · Advanced Parallel Processing · Machine Learning</p>
+          <p class="card-desc" style="margin-top: 1rem; font-size: 0.88rem;">M.S. thesis research on systems for LLM inference and GPU efficiency.</p>
+          <p class="card-desc" style="margin-top: 1rem; font-size: 0.88rem;">Database Systems Principles · Distributed Systems · Cloud Computing · Advanced Parallel Processing · Machine Learning · Reinforcement Learning</p>
         </div>
 
         <div class="bento-card">
