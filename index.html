@@ -6,8 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kushagra Bainsla - Systems & Infrastructure Engineer</title>
   <meta name="description" content="Systems and infrastructure engineer working on distributed systems, LLM inference, GPU efficiency, and fault-tolerant ML training.">
+
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Applies a saved theme before first paint. -->
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.dataset.theme = savedTheme;
+      }
+    } catch (error) {
+      // Storage can be blocked; the system theme still applies.
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Unbounded:wght@300;500;800&display=swap">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -31,489 +48,302 @@
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">Kushagra Bainsla</a>
-      <div class="nav-links">
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#work">Work</a>
-        <a href="assets/Kushagra_Bainsla_Resume_2026.pdf" target="_blank">Resume</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container">
-      <h1 class="display-text fade-in-up">
-        Scalable.<br>
-        Reliable.<br>
-        <span class="text-gradient">Infrastructure.</span>
-      </h1>
-      <p class="subtitle fade-in-up delay-1">
-        Systems and infrastructure engineer working on distributed systems, LLM inference, GPU efficiency, and fault-tolerant ML training.
-      </p>
-      <a href="#work" class="cta-button fade-in-up delay-2">View Work</a>
+    <header class="site-header">
+      <span>Systems &amp; Infrastructure</span>
+      <nav class="site-nav">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="assets/Kushagra_Bainsla_Resume_2026.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button">
+          <span class="theme-toggle-dot" aria-hidden="true"></span>
+          <span id="theme-toggle-label">Dark</span>
+        </button>
+      </nav>
+    </header>
+
+    <div class="globe" aria-hidden="true">
+      <div class="globe-world" id="globe"></div>
+    </div>
+
+    <div class="hero-copy">
+      <h1>Kushagra<br>Bainsla</h1>
+      <p class="hero-line">Distributed systems, LLM inference, and ML training that survives losing a machine.</p>
     </div>
   </section>
 
-  <!-- Skills Section (Bento Grid) -->
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title fade-in-up">Core Technologies</h2>
-      <div class="bento-grid">
-        <div class="bento-card wide fade-in-up delay-1">
-          <i class="fa-solid fa-server card-icon"></i>
-          <h3 class="card-title">Backend Engineering</h3>
-          <p class="card-desc">Production-grade service design across Python, Go, and Node - GraphQL APIs, async task pipelines with Celery, and systems architected from the ground up for sub-120ms latency, 99.99% uptime, and zero-downtime operations.</p>
-        </div>
+  <main>
 
-        <div class="bento-card fade-in-up delay-2">
-          <i class="fa-brands fa-aws card-icon"></i>
-          <h3 class="card-title">Cloud Native</h3>
-          <p class="card-desc">Full-stack cloud ownership across AWS - containerized workloads on ECS and Kubernetes, event-driven pipelines on Kafka, infrastructure codified in Terraform, and CI/CD via GitHub Actions. Built for teams that ship fast and sleep well.</p>
-        </div>
+    <!-- Work -->
+    <section id="work" class="work">
+      <h2 class="label label-inset">Selected work</h2>
 
-        <div class="bento-card fade-in-up delay-3">
-          <i class="fa-solid fa-database card-icon"></i>
-          <h3 class="card-title">Data Systems</h3>
-          <p class="card-desc">Data layer design that doesn't become a bottleneck - relational integrity in Postgres, sub-second analytics at scale in Apache Pinot, Redis caching, DynamoDB for high-throughput key-value, and Elasticsearch for full-text. The right store for the right workload.</p>
-        </div>
+      <article class="row">
+        <span class="row-num">01</span>
+        <h3 class="row-title"><a href="https://github.com/Kushagrabainsla/north" target="_blank" rel="noopener">north</a></h3>
+        <p class="row-desc">A personal AI agent that learns how you think and earns autonomy through approvals. Routes each step to the right model and recovers partial tasks from an append-only log.</p>
+        <span class="row-arrow" aria-hidden="true">→</span>
+      </article>
 
-        <div class="bento-card wide fade-in-up delay-1">
-          <i class="fa-solid fa-network-wired card-icon"></i>
-          <h3 class="card-title">Distributed Systems</h3>
-          <p class="card-desc">Systems that hold up under pressure - event-driven architectures, reliable message queues, backpressure handling, and fault isolation patterns that keep failures local and keep the system running.</p>
-        </div>
+      <article class="row">
+        <span class="row-num">02</span>
+        <h3 class="row-title"><a href="https://dashboard.thesentinel.site/" target="_blank" rel="noopener">Sentinel</a></h3>
+        <p class="row-desc">Serverless email at 200K+ messages a month for under $50, with multi-region replication, retry and dead-letter handling, and Gemini content generation. <a class="row-source" href="https://github.com/Kushagrabainsla/sentinel" target="_blank" rel="noopener">Source</a></p>
+        <span class="row-arrow" aria-hidden="true">→</span>
+      </article>
 
-        <div class="bento-card fade-in-up delay-2">
-          <i class="fa-solid fa-brain card-icon"></i>
-          <h3 class="card-title">ML Infrastructure</h3>
-          <p class="card-desc">End-to-end ML infrastructure built for production - training pipelines with live checkpoint-restore (CRIU/CUDA) for zero-loss preemption, LLM serving and GPU performance analysis, ONNX-optimized model serving, experiment tracking, and vector search powering semantic retrieval at scale.</p>
-        </div>
+      <article class="row">
+        <span class="row-num">03</span>
+        <h3 class="row-title"><a href="https://kushagrabainsla.github.io/hereafter/" target="_blank" rel="noopener">Hereafter</a></h3>
+        <p class="row-desc">A 2 to 8 player browser FPS with no game server. Combat authority moves to another player if the host drops. WebRTC, Three.js, WebGPU.</p>
+        <span class="row-arrow" aria-hidden="true">→</span>
+      </article>
 
-        <div class="bento-card fade-in-up delay-3">
-          <i class="fa-solid fa-eye card-icon"></i>
-          <h3 class="card-title">Observability</h3>
-          <p class="card-desc">Full-stack observability that surfaces signal in the noise - structured logging, custom metrics, distributed tracing with Sentry and Datadog, and alert design that pages on what matters and nothing else.</p>
+      <article class="row">
+        <span class="row-num">04</span>
+        <h3 class="row-title"><a href="https://chromewebstore.google.com/detail/afkfidnckdglmamjpnofcpdgfddfneji" target="_blank" rel="noopener">Socratic Tangents</a></h3>
+        <p class="row-desc">Branch off any passage of a ChatGPT or Claude reply without losing your place. No API key, no backend, no telemetry.</p>
+        <span class="row-arrow" aria-hidden="true">→</span>
+      </article>
+
+      <article class="row">
+        <span class="row-num">05</span>
+        <h3 class="row-title"><a href="https://pepy.tech/projects/build-flask-app" target="_blank" rel="noopener">Build-flask-app</a></h3>
+        <p class="row-desc">An open-source Flask scaffolding CLI with 42K+ downloads. WebSockets, database integration, and tests wired up from day one.</p>
+        <span class="row-arrow" aria-hidden="true">→</span>
+      </article>
+
+      <div class="also">
+        <h3 class="also-label">Also</h3>
+        <div class="also-grid">
+          <div>
+            <a href="https://devpost.com/software/curiosityai" target="_blank" rel="noopener">CuriosityAI</a>
+            <p>Semantic research discovery in 3D, built at CalHacks 12.0.</p>
+          </div>
+          <div>
+            <a href="https://github.com/krishmula/fightflow" target="_blank" rel="noopener">FightFlow</a>
+            <p>Five punch-classification models, all beaten by a pose-based LSTM.</p>
+          </div>
+          <div>
+            <a href="https://github.com/Aero-inc/sentry" target="_blank" rel="noopener">Sentry</a>
+            <p>Real-time threat detection with ONNX models on ECS Fargate.</p>
+          </div>
+          <div>
+            <a href="https://github.com/Kushagrabainsla/prism" target="_blank" rel="noopener">Prism</a>
+            <p>A language for declarative data deconstruction, built in Haskell.</p>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Numbers -->
+    <section class="numbers" aria-label="Selected results">
+      <div>
+        <p class="number">99.99%</p>
+        <p>Uptime on a $2M ARR platform</p>
+      </div>
+      <div>
+        <p class="number">1M+</p>
+        <p>Notifications a day</p>
+      </div>
+      <div>
+        <p class="number">97.6%</p>
+        <p>Lower P95 after moving analytics to Pinot</p>
+      </div>
+      <div>
+        <p class="number">42K+</p>
+        <p>Open-source downloads</p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="block">
+      <h2 class="label">Experience</h2>
+
+      <article class="entry">
+        <h3>LinkedIn</h3>
+        <div>
+          <p class="entry-role">Systems &amp; Infrastructure Engineer Intern</p>
+          <p class="entry-note">Built live checkpoint-restore for ML workloads, capturing and migrating complete CPU and GPU execution state across heterogeneous machines (CRIU, CUDA, Kubernetes) for fault-tolerant, preemptible training with zero data loss.</p>
+        </div>
+        <p class="entry-date">May 2026 – Aug 2026</p>
+      </article>
+
+      <article class="entry">
+        <h3>Uniqode</h3>
+        <div>
+          <p class="entry-role">Senior Software Engineer</p>
+          <p class="entry-note">Owned the backend of a $2M ARR platform at 99.99% uptime across a monolith and microservices. Scaled notifications to 1M+ cross-platform events a day and cut observability spend by $12K a year.</p>
+        </div>
+        <p class="entry-date">Aug 2024 – Jun 2025</p>
+      </article>
+
+      <article class="entry entry-continued">
+        <h3 class="visually-hidden">Uniqode</h3>
+        <div class="entry-spacer" aria-hidden="true"></div>
+        <div>
+          <p class="entry-role">Software Engineer</p>
+          <p class="entry-note">Migrated analytics to Apache Pinot, cutting P95 query latency by 97.6%, and brought API P95 under 120ms. Built Azure AD and Salesforce integrations behind $300K+ in ARR. Ran 70+ interviews and mentored 3 engineers.</p>
+        </div>
+        <p class="entry-date">Aug 2022 – Jul 2024</p>
+      </article>
+
+      <article class="entry entry-continued">
+        <h3 class="visually-hidden">Uniqode</h3>
+        <div class="entry-spacer" aria-hidden="true"></div>
+        <div>
+          <p class="entry-role">Software Engineering Intern</p>
+          <p class="entry-note">Built API and bulk-operation infrastructure that cut processing latency by 40% and made bulk actions 12x faster. Added threat intelligence for Tor, VPN, and bot traffic.</p>
+        </div>
+        <p class="entry-date">Feb 2022 – Jul 2022</p>
+      </article>
+
+      <article class="entry">
+        <h3>LetsEndorse Development</h3>
+        <div>
+          <p class="entry-role">Summer Intern</p>
+          <p class="entry-note">Rebuilt KPI reporting as reusable React dashboards, cutting insight time from 90 minutes to 5. Shipped 15+ React Native screens that doubled operational efficiency for delivery partners.</p>
+        </div>
+        <p class="entry-date">May 2021 – Jul 2021</p>
+      </article>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="block block-tight">
+      <h2 class="label">Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Backend</h3>
+          <p>Python, Go, Node, GraphQL, Celery</p>
+        </div>
+        <div>
+          <h3>Cloud</h3>
+          <p>AWS, ECS, Kubernetes, Kafka, Terraform, GitHub Actions</p>
+        </div>
+        <div>
+          <h3>Data</h3>
+          <p>Postgres, Apache Pinot, Redis, DynamoDB, Elasticsearch</p>
+        </div>
+        <div>
+          <h3>Distributed systems</h3>
+          <p>Event-driven architectures, message queues, backpressure, fault isolation</p>
+        </div>
+        <div>
+          <h3>ML infrastructure</h3>
+          <p>Checkpoint-restore with CRIU and CUDA, LLM serving, GPU performance analysis, ONNX, vector search</p>
+        </div>
+        <div>
+          <h3>Observability</h3>
+          <p>Structured logging, custom metrics, distributed tracing, Sentry, Datadog, alert design</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="block block-tight">
+      <h2 class="label">Education</h2>
+
+      <article class="entry">
+        <h3>San Jose State University</h3>
+        <div>
+          <p class="entry-role">Master of Science in Computer Science · GPA 4.0 / 4.0</p>
+          <p class="entry-note">M.S. thesis research on systems for LLM inference and GPU efficiency.</p>
+          <p class="entry-note">Database Systems Principles · Distributed Systems · Cloud Computing · Advanced Parallel Processing · Machine Learning · Reinforcement Learning</p>
+        </div>
+        <p class="entry-date">Aug 2025 – May 2027</p>
+      </article>
+
+      <article class="entry">
+        <h3>Kurukshetra University</h3>
+        <div>
+          <p class="entry-role">Bachelor of Technology in CS&amp;E</p>
+          <p class="entry-note">Data Structures &amp; Algorithms · Advanced Algorithms · DBMS · OOP · Computer Networks · Operating Systems</p>
+        </div>
+        <p class="entry-date">Aug 2018 – Jul 2022</p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- Contact -->
+  <footer id="contact" class="contact">
+    <h2 class="contact-label">Say hello</h2>
+    <a class="contact-email" href="mailto:kushagrabainsla@gmail.com">kushagrabainsla@gmail.com</a>
+
+    <div class="contact-grid">
+      <div>
+        <h3>Direct</h3>
+        <a href="mailto:kushagra.bainsla@sjsu.edu">kushagra.bainsla@sjsu.edu</a>
+        <a href="tel:+14083874802">+1 (408) 387-4802</a>
+        <span>San Jose, CA, USA</span>
+      </div>
+      <div>
+        <h3>Code</h3>
+        <a href="https://github.com/Kushagrabainsla" target="_blank" rel="noopener">GitHub (personal)</a>
+        <a href="https://github.com/Kushagra-org" target="_blank" rel="noopener">GitHub (work)</a>
+        <a href="https://leetcode.com/u/kushagrabainsla/" target="_blank" rel="noopener">LeetCode</a>
+      </div>
+      <div>
+        <h3>Elsewhere</h3>
+        <a href="https://www.linkedin.com/in/kushagrabainsla/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://medium.com/@kushagrabainsla" target="_blank" rel="noopener">Medium</a>
+        <a href="https://smartcards.pro/KUl7uX" target="_blank" rel="noopener">Digital Business Card</a>
       </div>
     </div>
-  </section>
 
-  <!-- Experience Section -->
-  <section id="experience">
-    <div class="container">
-      <h2 class="section-title fade-in-up">Work Experience</h2>
-      <div class="timeline">
-
-        <!-- LinkedIn -->
-        <div class="exp-item fade-in-up">
-          <div class="exp-header">
-            <div>
-              <h3 class="exp-company">LinkedIn</h3>
-              <span class="exp-role">Systems & Infrastructure Engineer Intern</span>
-            </div>
-            <span class="exp-date">May 2026 – Aug 2026</span>
-          </div>
-          <ul class="exp-bullets">
-            <li>Engineered a live ML workload checkpoint-restore system - capturing and migrating complete CPU and GPU execution state across heterogeneous machines (CRIU, CUDA, Kubernetes) to enable fault-tolerant, preemptible training with zero data loss.</li>
-          </ul>
-        </div>
-
-        <!-- Uniqode -->
-        <div class="exp-item fade-in-up">
-          <h3 class="exp-company">Uniqode</h3>
-
-          <div class="exp-role-block" style="margin-top: 1rem; padding-top: 0; border-top: none;">
-            <div class="exp-subheader">
-              <span class="exp-role">Senior Software Engineer</span>
-              <span class="exp-date">Aug 2024 – Jun 2025</span>
-            </div>
-            <ul class="exp-bullets">
-              <li>Owned the full backend surface of a $2M ARR platform - driving 99.99% uptime across a distributed monolith and microservices fleet, scaling notification infrastructure to 1M+ daily cross-platform events, and reclaiming $12K/year in observability spend through targeted log infrastructure overhaul.</li>
-            </ul>
-          </div>
-
-          <div class="exp-role-block">
-            <div class="exp-subheader">
-              <span class="exp-role">Software Engineer</span>
-              <span class="exp-date">Aug 2022 – Jul 2024</span>
-            </div>
-            <ul class="exp-bullets">
-              <li>Drove a step-change in platform performance - a ground-up analytics migration to Apache Pinot collapsed P95 query latency by 97.6%, API optimization pushed P95 under 120ms, enterprise integrations with Azure AD and Salesforce unlocked $300K+ in ARR, and built out the team through 70+ interviews and direct mentorship of 3 engineers.</li>
-            </ul>
-          </div>
-
-          <div class="exp-role-block">
-            <div class="exp-subheader">
-              <span class="exp-role">Software Engineering Intern</span>
-              <span class="exp-date">Feb 2022 – Jul 2022</span>
-            </div>
-            <ul class="exp-bullets">
-              <li>Shipped core API and bulk operation infrastructure that cut processing latency by 40% and bulk action time by 12x through async pipelines and query re-architecture; also stood up threat intelligence coverage for Tor, VPN, and bot traffic with near-zero performance overhead.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- LetsEndorse -->
-        <div class="exp-item fade-in-up">
-          <div class="exp-header">
-            <div>
-              <h3 class="exp-company">LetsEndorse Development</h3>
-              <span class="exp-role">Summer Intern</span>
-            </div>
-            <span class="exp-date">May 2021 – Jul 2021</span>
-          </div>
-          <ul class="exp-bullets">
-            <li>Redesigned the KPI reporting surface with reusable React.js dashboards that compressed insight cycle time from 90 minutes to 5, and shipped 15+ React Native screens that doubled operational efficiency for delivery partners.</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="work">
-    <div class="container">
-      <h2 class="section-title">Selected Work</h2>
-
-      <div class="project-feature fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">
-            <a href="https://github.com/Kushagrabainsla/north" target="_blank" class="project-link">north</a>
-          </h3>
-          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            Personal AI Agent That Earns Autonomy
-          </p>
-          <p class="card-desc">
-            A digital version of you that learns how you think and earns autonomy over time. A planner dispatches work across agents and coding tools, dynamic model tiering routes each step to the right model at the right cost, and an append-only audit trail enables partial task recovery without redundant inference. Long-term memory and judgment rules sharpen from observed decisions, an approval system governs what runs unattended, and it all runs from a dashboard, terminal, Telegram, or a schedule.
-          </p>
-          <div class="project-tags">
-            <span class="tag">LLM</span>
-            <span class="tag">Multi-Agent</span>
-            <span class="tag">Orchestration</span>
-            <span class="tag">Memory</span>
-          </div>
-        </div>
-        <div class="project-visual">
-          <i class="fa-solid fa-sitemap" style="font-size: 5rem; color: var(--accent-blue);"></i>
-        </div>
-      </div>
-
-      <div class="project-feature fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">
-            <a href="https://dashboard.thesentinel.site/" target="_blank" class="project-link">Sentinel</a>
-          </h3>
-          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            Distributed, Serverless Email Platform
-          </p>
-          <p class="card-desc">
-            A production email platform handling 200K+ messages/month for under $50 - a cost structure that would be impossible on traditional infrastructure. Async job queues, real-time event ingestion, multi-region replication, and a retry/DLQ architecture that treats failure as a first-class concern, with Gemini-powered content generation and live analytics that separate human opens from proxy opens.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Serverless</span>
-            <span class="tag">Event Driven</span>
-            <span class="tag">AWS</span>
-            <span class="tag">Queues</span>
-            <span class="tag">GenAI</span>
-          </div>
-          <a href="https://github.com/Kushagrabainsla/sentinel" target="_blank" rel="noopener" class="project-source"><i class="fa-brands fa-github"></i> Source</a>
-        </div>
-        <div class="project-visual">
-          <div class="node-grid">
-            <div class="node" style="animation-delay: 0s"></div>
-            <div class="node" style="animation-delay: 0.2s"></div>
-            <div class="node" style="animation-delay: 0.4s"></div>
-            <div class="node" style="animation-delay: 0.6s"></div>
-            <div class="node" style="animation-delay: 0.8s"></div>
-            <div class="node" style="animation-delay: 1.0s"></div>
-            <div class="node" style="animation-delay: 1.2s"></div>
-            <div class="node" style="animation-delay: 1.4s"></div>
-            <div class="node" style="animation-delay: 1.6s"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-feature fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">
-            <a href="https://kushagrabainsla.github.io/hereafter/" target="_blank" class="project-link">Hereafter</a>
-          </h3>
-          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            Peer-to-Peer Multiplayer FPS in the Browser
-          </p>
-          <p class="card-desc">
-            A first-person shooter that runs from a single link - no install, no account, no game server. Two to eight players connect browser to browser over WebRTC, with one player's browser checking combat for the room; if that player leaves or crashes, the role moves to another and the match carries on. A hand-built night market with destructible cover, rendered in Three.js on WebGPU with a WebGL 2 fallback.
-          </p>
-          <div class="project-tags">
-            <span class="tag">WebRTC</span>
-            <span class="tag">Peer-to-Peer</span>
-            <span class="tag">Three.js</span>
-            <span class="tag">WebGPU</span>
-          </div>
-        </div>
-        <div class="project-visual">
-          <i class="fa-solid fa-crosshairs" style="font-size: 5rem; color: var(--accent-purple);"></i>
-        </div>
-      </div>
-
-      <div class="project-feature fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">
-            <a href="https://chromewebstore.google.com/detail/afkfidnckdglmamjpnofcpdgfddfneji" target="_blank" class="project-link">Socratic Tangents</a>
-          </h3>
-          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            Turning Linear AI Chats into a Tree of Curiosity
-          </p>
-          <p class="card-desc">
-            A bet on how people will actually learn from AI: not one linear thread, but a tree of curiosity. Branch off any passage of a ChatGPT or Claude reply into a focused, inline thought bubble without derailing the main conversation. No API key, no backend, no telemetry - it drives the page's own session, so nothing ever leaves the browser, and each provider is a pluggable adapter.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Browser Extension</span>
-            <span class="tag">Privacy-First</span>
-          </div>
-        </div>
-        <div class="project-visual">
-          <i class="fa-solid fa-code-branch" style="font-size: 5rem; color: var(--accent-blue);"></i>
-        </div>
-      </div>
-
-      <div class="project-feature fade-in-up">
-        <div class="project-content">
-          <h3 class="project-title">
-            <a href="https://pepy.tech/projects/build-flask-app" target="_blank" class="project-link">Build-flask-app</a>
-          </h3>
-          <p class="subtitle" style="text-align: left; margin: 0 0 1.5rem 0;">
-            Open-Source Flask CLI (42K+ Downloads)
-          </p>
-          <p class="card-desc">
-            Eliminated the hours-long boilerplate tax on Flask projects - an open-source CLI with 42K+ downloads that generates production-ready scaffolding with WebSockets, database integration, and test infrastructure wired up from day one.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Flask</span>
-            <span class="tag">CLI</span>
-            <span class="tag">Open Source</span>
-            <span class="tag">PyPI</span>
-          </div>
-        </div>
-        <div class="project-visual">
-          <i class="fa-solid fa-terminal" style="font-size: 5rem; color: var(--accent-purple);"></i>
-        </div>
-      </div>
-
-      <h3 class="more-projects-title fade-in-up">More Projects</h3>
-      <div class="more-projects-grid">
-
-        <div class="bento-card fade-in-up delay-1">
-          <h4 class="card-title">
-            <a href="https://devpost.com/software/curiosityai" target="_blank" class="project-link">CuriosityAI</a>
-          </h4>
-          <p class="more-project-sub">CalHacks 12.0</p>
-          <p class="card-desc">A semantic research discovery engine - embeddings in ChromaDB map the research space into navigable 3D clusters, and LLMs propose feasible directions at the boundaries of existing knowledge.</p>
-          <div class="project-tags">
-            <span class="tag">GenAI</span>
-            <span class="tag">ChromaDB</span>
-            <span class="tag">Vector Search</span>
-          </div>
-        </div>
-
-        <div class="bento-card fade-in-up delay-2">
-          <h4 class="card-title">
-            <a href="https://github.com/krishmula/fightflow" target="_blank" class="project-link">FightFlow</a>
-          </h4>
-          <p class="more-project-sub">ML Punch Classification</p>
-          <p class="card-desc">A study of five architectures, from a scratch CNN to fine-tuned ResNet-18, all outperformed by a pose-based LSTM on skeleton features invariant to lighting, background, and camera angle.</p>
-          <div class="project-tags">
-            <span class="tag">PyTorch</span>
-            <span class="tag">MediaPipe</span>
-            <span class="tag">LSTM</span>
-          </div>
-        </div>
-
-        <div class="bento-card fade-in-up delay-1">
-          <h4 class="card-title">
-            <a href="https://github.com/Aero-inc/sentry" target="_blank" class="project-link">Sentry</a>
-          </h4>
-          <p class="more-project-sub">Real-Time Threat Detection</p>
-          <p class="card-desc">A cloud-native detection platform - ONNX-optimized models served on ECS Fargate, infrastructure codified in Terraform with environment-isolated IAM, and automated promotion to staging and production.</p>
-          <div class="project-tags">
-            <span class="tag">ML Inference</span>
-            <span class="tag">AWS ECS</span>
-            <span class="tag">Terraform</span>
-          </div>
-        </div>
-
-        <div class="bento-card fade-in-up delay-2">
-          <h4 class="card-title">
-            <a href="https://github.com/Kushagrabainsla/prism" target="_blank" class="project-link">Prism</a>
-          </h4>
-          <p class="more-project-sub">Custom Programming Language</p>
-          <p class="card-desc">A language for declarative deconstruction of complex data, built in Haskell with a Parsec grammar, pattern matching with variable binding, recursive scoping, and monadic error propagation.</p>
-          <div class="project-tags">
-            <span class="tag">Haskell</span>
-            <span class="tag">Language Design</span>
-            <span class="tag">Parsec</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- Education Section -->
-  <section id="education">
-    <div class="container">
-      <h2 class="section-title fade-in-up">Education</h2>
-      <div class="edu-grid fade-in-up delay-1">
-
-        <div class="bento-card">
-          <i class="fa-solid fa-graduation-cap card-icon"></i>
-          <h3 class="card-title">Master of Science in Computer Science</h3>
-          <p class="card-desc">San Jose State University &nbsp;·&nbsp; GPA 4.0 / 4.0</p>
-          <p class="card-desc" style="margin-top: 0.4rem; color: var(--text-secondary); font-size: 0.85rem;">Aug 2025 – May 2027</p>
-          <p class="card-desc" style="margin-top: 1rem; font-size: 0.88rem;">M.S. thesis research on systems for LLM inference and GPU efficiency.</p>
-          <p class="card-desc" style="margin-top: 1rem; font-size: 0.88rem;">Database Systems Principles · Distributed Systems · Cloud Computing · Advanced Parallel Processing · Machine Learning · Reinforcement Learning</p>
-        </div>
-
-        <div class="bento-card">
-          <i class="fa-solid fa-graduation-cap card-icon" style="color: var(--accent-purple);"></i>
-          <h3 class="card-title">Bachelor of Technology in CS&amp;E</h3>
-          <p class="card-desc">Kurukshetra University</p>
-          <p class="card-desc" style="margin-top: 0.4rem; color: var(--text-secondary); font-size: 0.85rem;">Aug 2018 – Jul 2022</p>
-          <p class="card-desc" style="margin-top: 1rem; font-size: 0.88rem;">Data Structures & Algorithms · Advanced Algorithms · DBMS · OOP · Computer Networks · Operating Systems</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2 class="section-title fade-in-up">Get in Touch</h2>
-      <div class="contact-grid fade-in-up delay-1">
-
-        <!-- Contact Info -->
-        <div class="bento-card contact-card">
-          <h3 class="card-title">Contact Info</h3>
-          <ul class="contact-list">
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <div>
-                <span class="label">University</span>
-                <a href="mailto:kushagra.bainsla@sjsu.edu">kushagra.bainsla@sjsu.edu</a>
-              </div>
-            </li>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <div>
-                <span class="label">Personal</span>
-                <a href="mailto:kushagrabainsla@gmail.com">kushagrabainsla@gmail.com</a>
-              </div>
-            </li>
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <div>
-                <span class="label">Phone</span>
-                <a href="tel:+14083874802">+1 (408) 387-4802</a>
-              </div>
-            </li>
-            <li>
-              <i class="fa-solid fa-location-dot"></i>
-              <div>
-                <span class="label">Location</span>
-                <span>San Jose, CA, USA</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Social Profiles -->
-        <div class="bento-card contact-card">
-          <h3 class="card-title">Social Profiles</h3>
-          <ul class="contact-list">
-            <li>
-              <i class="fa-brands fa-linkedin"></i>
-              <a href="https://www.linkedin.com/in/kushagrabainsla/" target="_blank" rel="noopener">LinkedIn</a>
-            </li>
-            <li>
-              <i class="fa-brands fa-github"></i>
-              <div>
-                <span class="label">Work</span>
-                <a href="https://github.com/Kushagra-org" target="_blank" rel="noopener">github.com/Kushagra-org</a>
-              </div>
-            </li>
-            <li>
-              <i class="fa-brands fa-github"></i>
-              <div>
-                <span class="label">Personal</span>
-                <a href="https://github.com/Kushagrabainsla" target="_blank"
-                  rel="noopener">github.com/Kushagrabainsla</a>
-              </div>
-            </li>
-            <li>
-              <i class="fa-solid fa-code"></i>
-              <a href="https://leetcode.com/u/kushagrabainsla/" target="_blank" rel="noopener">LeetCode</a>
-            </li>
-            <li>
-              <i class="fa-brands fa-medium"></i>
-              <a href="https://medium.com/@kushagrabainsla" target="_blank" rel="noopener">Medium</a>
-            </li>
-            <li>
-              <i class="fa-solid fa-id-card"></i>
-              <a href="https://smartcards.pro/KUl7uX" target="_blank" rel="noopener">Digital Business Card</a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="copyright">
-          <p>&copy; 2026 Kushagra Bainsla. All rights reserved.</p>
-        </div>
-        <div class="social-links">
-          <a href="https://github.com/Kushagrabainsla" class="social-icon" target="_blank"><i
-              class="fa-brands fa-github"></i></a>
-          <a href="https://linkedin.com/in/kushagrabainsla" class="social-icon" target="_blank"><i
-              class="fa-brands fa-linkedin"></i></a>
-          <a href="mailto:kushagrabainsla@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-      </div>
-    </div>
+    <p class="copyright">&copy; 2026 Kushagra Bainsla</p>
   </footer>
 
   <script>
-    // Simple scroll reveal
-    const observerOptions = {
-      threshold: 0.1
-    };
+    // Theme switch: follows the system until the visitor picks a theme.
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeLabel = document.getElementById('theme-toggle-label');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
+    function currentTheme() {
+      return document.documentElement.dataset.theme || (systemDark.matches ? 'dark' : 'light');
+    }
 
-    document.querySelectorAll('.fade-in-up').forEach(el => {
-      el.style.animationPlayState = 'paused';
-      observer.observe(el);
+    function updateThemeToggle() {
+      const next = currentTheme() === 'dark' ? 'light' : 'dark';
+      themeLabel.textContent = next === 'dark' ? 'Dark' : 'Light';
+      themeToggle.setAttribute('aria-label', `Switch to ${next} mode`);
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const next = currentTheme() === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try {
+        localStorage.setItem('theme', next);
+      } catch (error) {
+        // The theme still applies for this visit.
+      }
+      updateThemeToggle();
+    });
+
+    systemDark.addEventListener('change', updateThemeToggle);
+    updateThemeToggle();
+
+    // Decorative wireframe globe: meridians plus parallels.
+    const globe = document.getElementById('globe');
+
+    function addRing(transform, className) {
+      const ring = document.createElement('div');
+      ring.className = className;
+      ring.style.transform = transform;
+      globe.appendChild(ring);
+    }
+
+    for (let i = 0; i < 18; i++) {
+      addRing(`rotateY(${i * 10}deg)`, 'globe-ring');
+    }
+
+    [-0.9, -0.6, -0.3, 0, 0.3, 0.6, 0.9].forEach((z) => {
+      const scale = Math.sqrt(1 - z * z).toFixed(3);
+      addRing(`rotateX(90deg) translateZ(calc(var(--globe-radius) * ${z})) scale(${scale})`, 'globe-ring globe-ring-soft');
     });
   </script>
 </body>
